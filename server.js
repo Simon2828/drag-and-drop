@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 
 app.use('/files', express.static(__dirname + '/src'));
+app.use('/files', express.static(__dirname + '/public'));
 
 /* insert any app.get or app.post you need here */
 

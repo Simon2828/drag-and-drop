@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="files/js/app-bundle.js"></script>
     <title>Hikster</title>
     <link rel="stylesheet" type="text/css" href="files/css/app-bundle.css">
 </head>
@@ -15,16 +15,22 @@
   <div class="app">
     <header>
       <nav>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
+        <ul class="ul">
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="main">
+      <h2>Drop Zone</h2>
+      <div class="zone__container" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
+      <ul id="target" class="ul" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"></ul>
+      </div>
+      <h2>Delete Zone</h2>
+      <div id="target" class="zone__container" ondrop="deleteItem(event);" ondragover="dragover_handler(event);"></div>
+      <button class="button">Nouvel élément</button>
+      <button class="button__reset">reset</button>
+    </main>
   </div>
-  <script src="files/js/app-bundle.js"></script>
+
 </body>
 
 </html>
